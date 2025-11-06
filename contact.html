@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SnapB2B - Get in touch with our team to learn more about B2B Payables Orchestration.">
+  <title>Contact Us - SnapB2B</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGATION ===== -->
+  <header class="header">
+    <nav class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="SnapB2B Logo">
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+        <li><a href="partners.html" class="nav-link">Partners</a></li>
+        <li><a href="contact.html" class="nav-link btn btn-primary">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team to learn how SnapB2B can transform your B2B payments</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: start;">
+        
+        <!-- Contact Form -->
+        <div data-animate>
+          <h2 class="mb-3">Send Us a Message</h2>
+          <p class="text-secondary mb-4">Fill out the form below and our team will get back to you within 24 hours.</p>
+          
+          <form data-contact-form data-validate>
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company" class="form-label">Company Name</label>
+              <input type="text" id="company" name="company" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject *</label>
+              <select id="subject" name="subject" class="form-select" required>
+                <option value="">Select a subject</option>
+                <option value="demo">Request a Demo</option>
+                <option value="pricing">Pricing Information</option>
+                <option value="support">Technical Support</option>
+                <option value="partnership">Partnership Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message *</label>
+              <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Contact Information -->
+        <div data-animate>
+          <h2 class="mb-3">Contact Information</h2>
+          
+          <div class="card mb-3">
+            <h3>Corporate Office</h3>
+            <p><strong>Address:</strong><br>
+            770 St. George Blvd.<br>
+            Moncton, New Brunswick<br>
+            E2E 2C6, Canada</p>
+          </div>
+          
+          <div class="card mb-3">
+            <h3>US Office</h3>
+            <p><strong>Address:</strong><br>
+            3500 South DuPont Highway<br>
+            Dover, Delaware<br>
+            19901, USA</p>
+          </div>
+          
+          <div class="card mb-3">
+            <h3>Get in Touch</h3>
+            <p><strong>Email:</strong><br>
+            <a href="mailto:info@snapb2b.com">info@snapb2b.com</a></p>
+            
+            <p class="mt-2"><strong>Support:</strong><br>
+            <a href="mailto:support@snapb2b.ca">support@snapb2b.ca</a></p>
+          </div>
+          
+          <div class="card">
+            <h3>Business Hours</h3>
+            <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM EST<br>
+            <strong>Saturday - Sunday:</strong> Closed</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Get Started?</h2>
+        <p>Schedule a demo to see how SnapB2B can streamline your payables process</p>
+        <a href="#" class="btn btn-large btn-secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Schedule a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>SnapB2B</h4>
+          <p>From Invoice Automation to B2B Payables Orchestration™</p>
+          <p class="mt-2">Capture. Process. Pay.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="partners.html">Partners</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><strong>Corporate Office:</strong><br>
+          770 St. George Blvd.<br>
+          Moncton, New Brunswick<br>
+          E2E 2C6, Canada</p>
+          
+          <p class="mt-2"><strong>US Office:</strong><br>
+          3500 South DuPont Highway<br>
+          Dover, Delaware<br>
+          19901, USA</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 SnapB2B. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
