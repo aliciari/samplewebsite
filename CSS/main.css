@@ -551,7 +551,6 @@ strong, b {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
-  justify-items: center; 
 }
 
 .feature-item {
