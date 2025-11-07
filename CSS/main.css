@@ -541,8 +541,6 @@ strong, b {
 /* ===== FEATURES SECTION ===== */
 .features {
   padding: var(--spacing-3xl) 0;
-  max-width: 960px;      /* or 800px / 1200px as you like */
-  margin: 0 auto;        /* centers the whole block on the page */
 }
 
 .features-grid {
