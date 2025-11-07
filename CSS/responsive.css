@@ -1,0 +1,297 @@
+/* SnapB2B Website - Responsive Styles */
+/* Mobile-First Responsive Design */
+
+/* ===== TABLET (768px and below) ===== */
+@media (max-width: 768px) {
+  
+  /* Typography */
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.875rem; }
+  h3 { font-size: 1.375rem; }
+  
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  
+  .hero p {
+    font-size: 1.125rem;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+  }
+  
+  .cta p {
+    font-size: 1.125rem;
+  }
+  
+  /* Layout */
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  /* Navigation */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--border-color);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-sm);
+    gap: 0;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-link {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Animated menu toggle */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Cards */
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* Features */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* Buttons */
+  .btn {
+    width: 100%;
+    display: block;
+  }
+  
+  .btn + .btn {
+    margin-top: var(--spacing-sm);
+  }
+  
+  /* Hero Spacing */
+  .hero {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .cta {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+/* ===== MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+  
+  /* Typography */
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .cta h2 {
+    font-size: 1.75rem;
+  }
+  
+  .cta p {
+    font-size: 1rem;
+  }
+  
+  /* Spacing adjustments */
+  :root {
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 2.5rem;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.25rem;
+  }
+  
+  .logo img {
+    height: 32px;
+  }
+  
+  /* Card icon */
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  /* Feature icon */
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== DESKTOP ENHANCEMENTS (1200px and above) ===== */
+@media (min-width: 1200px) {
+  
+  /* Hero */
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.375rem;
+  }
+  
+  /* Cards */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Features - 4 columns on large screens */
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  
+  /* Hide non-essential elements */
+  .header,
+  .nav-menu,
+  .menu-toggle,
+  .cta,
+  .footer {
+    display: none;
+  }
+  
+  /* Optimize for printing */
+  body {
+    color: black;
+    background: white;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  /* Show URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  /* Prevent page breaks inside elements */
+  .card,
+  .feature-item {
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+
+/* Focus styles for keyboard navigation */
+*:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Remove outline for mouse users but keep for keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0000ff;
+    --text-primary: #000000;
+    --background: #ffffff;
+    --border-color: #000000;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f3f4f6;
+    --text-secondary: #9ca3af;
+    --background: #111827;
+    --background-alt: #1f2937;
+    --border-color: #374151;
+  }
+  
+  .card {
+    background: var(--background-alt);
+  }
+  
+  .header {
+    background: var(--background);
+    border-bottom-color: var(--border-color);
+  }
+}
