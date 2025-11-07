@@ -539,15 +539,16 @@ strong, b {
 }
 
 /* ===== FEATURES SECTION ===== */
-/* .features { */
-/*  padding: var(--spacing-3xl) 0; */
-/* } */
+.features {
+  padding: var(--spacing-3xl) 0;
+}
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-xl);
   margin-top: var(--spacing-2xl);
+  justify-content: center;
 }
 
 .feature-item {
