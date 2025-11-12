@@ -24,32 +24,115 @@
   
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+  /* Dropdown Menu Styles */
+  .nav-menu li {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    z-index: 1000;
+  }
+  
+  .nav-menu li:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    list-style: none;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    background: var(--bg-light);
+  }
+  
+  .nav-link.has-dropdown::after {
+    content: ' ▾';
+    font-size: 0.8em;
+    margin-left: 0.25rem;
+  }
+  
+  /* Mobile Dropdown */
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      background: var(--bg-light);
+      margin-top: 0;
+      display: none;
+      padding-left: 1rem;
+    }
+    
+    .nav-menu li.dropdown-active .dropdown-menu {
+      display: block;
+    }
+  }
+  </style>
 </head>
 <body>
 
   <!-- ===== HEADER & NAVIGATION ===== -->
-  <header class="header">
-    <nav class="container nav-container">
-      <a href="index.html" class="logo">
-        <img src="images/Logo640.png" alt="SnapB2B Logo">
-      </a>
+<header class="header">
+  <nav class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/Logo640.png" alt="SnapB2B Logo">
+    </a>
+    
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
       
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <li>
+        <a href="about.html" class="nav-link has-dropdown">About</a>
+        <ul class="dropdown-menu">
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </li>
       
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="products.html" class="nav-link">Products</a></li>
-        <li><a href="solutions.html" class="nav-link">Solutions</a></li>
-        <li><a href="partners.html" class="nav-link">Partners</a></li>
-        <li><a href="contact.html" class="nav-link btn btn-primary">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+      <li>
+        <a href="products.html" class="nav-link has-dropdown">Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </li>
+      
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+      
+      <li>
+        <a href="resources.html" class="nav-link has-dropdown">Resources</a>
+        <ul class="dropdown-menu">
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="resources.html#faq">FAQs</a></li>
+          <li><a href="resources.html#news">News</a></li>
+          <li><a href="resources.html#blog">Blog</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
@@ -237,6 +320,22 @@
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>
-  
+
+  <script>
+  // Mobile dropdown toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.nav-menu > li:has(.dropdown-menu)');
+    
+    dropdowns.forEach(dropdown => {
+      dropdown.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          this.classList.toggle('dropdown-active');
+        }
+      });
+    });
+  });
+  </script>
+ 
 </body>
 </html>
