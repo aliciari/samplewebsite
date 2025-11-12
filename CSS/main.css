@@ -252,8 +252,8 @@ strong, b {
 }
 
 .logo img {
-  height: 42px;
-  width: auto;
+  width: 200px; 
+  height: auto;
 }
 
 .nav-menu {
