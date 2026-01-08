@@ -3,133 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SnapB2B Partners - Join our partner program and integrate with leading ERP systems.">
+  <meta name="description" content="SnapB2B Partners - Partnerships that monetize B2B payment flows.">
   <title>Partners - SnapB2B</title>
   <link rel="icon" type="image/png" href="images/Logo640.png">
   <link rel="stylesheet" href="CSS/main.css">
   <link rel="stylesheet" href="CSS/responsive.css">
+  
   <style>
-  /* Dropdown Menu Styles */
-  .nav-menu li {
-    position: relative;
-  }
-  
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    min-width: 200px;
-    padding: 0.5rem 0;
-    margin-top: 0.5rem;
-    z-index: 1000;
-  }
-  
-  .nav-menu li:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-menu li {
-    list-style: none;
-  }
-  
-  .dropdown-menu a {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: var(--text-dark);
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .dropdown-menu a:hover {
-    background: var(--bg-light);
-  }
-  
-  .nav-link.has-dropdown::after {
-    content: ' ▾';
-    font-size: 0.8em;
-    margin-left: 0.25rem;
-  }
-  
-  /* Mobile Dropdown */
-  @media (max-width: 768px) {
-    .dropdown-menu {
-      position: static;
-      box-shadow: none;
-      background: var(--bg-light);
-      margin-top: 0;
-      display: none;
-      padding-left: 1rem;
+    /* Skip to main content link - ACCESSIBILITY FIX */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: white;
+      padding: 8px 16px;
+      z-index: 10000;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+    }
+    .skip-link:focus {
+      top: 0;
     }
     
-    .nav-menu li.dropdown-active .dropdown-menu {
+    /* Logo sizing */
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+    
+    /* Dropdown Menu Styles */
+    .nav-menu li {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      min-width: 200px;
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+      z-index: 1000;
+    }
+    
+    .nav-menu li:hover .dropdown-menu {
       display: block;
     }
-  }
+    
+    .dropdown-menu li {
+      list-style: none;
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    
+    .dropdown-menu a:hover {
+      background: var(--bg-light);
+    }
+    
+    .nav-link.has-dropdown::after {
+      content: ' ▾';
+      font-size: 0.8em;
+      margin-left: 0.25rem;
+    }
+    
+    /* Mobile Dropdown */
+    @media (max-width: 768px) {
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: var(--bg-light);
+        margin-top: 0;
+        display: none;
+        padding-left: 1rem;
+      }
+      
+      .nav-menu li.dropdown-active .dropdown-menu {
+        display: block;
+      }
+    }
   </style>
-
 </head>
 <body>
 
+  <!-- Skip to main content - ACCESSIBILITY FIX -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ===== HEADER & NAVIGATION ===== -->
   <header class="header">
-  <nav class="container nav-container">
-    <a href="index.html" class="logo">
-      <img src="images/Logo640.png" alt="SnapB2B Logo">
-    </a>
-    
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <ul class="nav-menu">
-      <li><a href="index.html" class="nav-link">Home</a></li>
+    <nav class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/Logo640.png" alt="SnapB2B Logo">
+      </a>
       
-      <li>
-        <a href="about.html" class="nav-link has-dropdown">About</a>
-        <ul class="dropdown-menu">
-          <li><a href="partners.html">Partners</a></li>
-        </ul>
-      </li>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
       
-      <li>
-        <a href="products.html" class="nav-link has-dropdown">Products</a>
-        <ul class="dropdown-menu">
-          <li><a href="pricing.html">Pricing</a></li>
-        </ul>
-      </li>
-      
-      <li><a href="contact.html" class="nav-link">Contact</a></li>
-      
-      <li>
-        <a href="resources.html" class="nav-link has-dropdown">Resources</a>
-        <ul class="dropdown-menu">
-          <li><a href="case-studies.html">Case Studies</a></li>
-          <li><a href="resources.html#faq">FAQs</a></li>
-          <li><a href="resources.html#news">News</a></li>
-          <li><a href="resources.html#blog">Blog</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        
+        <li>
+          <a href="about.html" class="nav-link has-dropdown">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="partners.html">Partners</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="products.html" class="nav-link has-dropdown">Products</a>
+          <ul class="dropdown-menu">
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        
+        <li>
+          <a href="resources.html" class="nav-link has-dropdown">Resources</a>
+          <ul class="dropdown-menu">
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="resources.html#faq">FAQs</a></li>
+            <li><a href="resources.html#news">News</a></li>
+            <li><a href="resources.html#blog">Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <!-- ===== HERO SECTION ===== -->
-  <section class="hero">
+  <section class="hero" id="main-content">
     <div class="container">
       <div class="hero-content">
         <h1>Partnerships That Monetize <span class="highlight">B2B Payment Flows</span></h1>
-        <p>Whether you’re looking to improve client experience, expand your financial services offering, or unlock new revenue streams from B2B payment volume, SnapB2B provides the infrastructure behind your growth. Embed modern payables orchestration directly into your products today.</p>
+        <p>Whether you're looking to improve client experience, expand your financial services offering, or unlock new revenue streams from B2B payment volume, SnapB2B provides the infrastructure behind your growth. Embed modern payables orchestration directly into your products today.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== PARTNER TYPES ===== -->
+  <!-- ===== WHY PARTNER SECTION ===== -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-4">
@@ -139,7 +164,7 @@
       
       <div class="card-grid">
         <div class="card">
-          <div class="card-icon">🤝</div>
+          <div class="card-icon" role="img" aria-label="Handshake icon">🤝</div>
           <h3>Monetize B2B Payments at Scale</h3>
           <p>Transform invoice workflows into a revenue-generating layer inside your platform.</p>
           <ul style="list-style: disc; margin-left: 2rem; margin-top: 1.5rem; color: var(--text-secondary);">
@@ -152,7 +177,7 @@
         </div>
         
         <div class="card">
-          <div class="card-icon">🎓</div>
+          <div class="card-icon" role="img" aria-label="Graduation cap icon">🎓</div>
           <h3>Accelerate Your Product Roadmap</h3>
           <p>Instead of building complex AP infrastructure, embed a fully developed payables engine.</p>
           <ul style="list-style: disc; margin-left: 2rem; margin-top: 1.5rem; color: var(--text-secondary);">
@@ -165,7 +190,7 @@
         </div>
         
         <div class="card">
-          <div class="card-icon">💻</div>
+          <div class="card-icon" role="img" aria-label="Computer icon">💻</div>
           <h3>Strengthen Client Retention and Network Effect</h3>
           <p>Integrate your ERP, accounting, or payment platform with SnapB2B.</p>
           <ul style="list-style: disc; margin-left: 2rem; margin-top: 1.5rem; color: var(--text-secondary);">
@@ -176,7 +201,6 @@
           </ul>
           <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Embed Now</a>
         </div>
-        
       </div>
     </div>
   </section>
@@ -186,146 +210,79 @@
     <div class="container">
       <div class="text-center mb-4">
         <h2>Partner Benefits</h2>
-        <p class="text-secondary">Why partner with SnapB2B</p>
+        <p class="text-secondary">Why banks and B2B platforms choose to embed SnapB2B</p>
       </div>
       
       <div class="features-grid" style="justify-items: center;">
         <div class="feature-item">
-          <div class="feature-icon">💰</div>
-          <h3>Attractive Revenue</h3>
-          <p>Earn competitive commissions and recurring revenue from client referrals and successful implementations.</p>
+          <div class="feature-icon" role="img" aria-label="Money icon">💰</div>
+          <h3>New Revenue Streams</h3>
+          <p>Monetize every invoice processed and payment executed. Generate recurring revenue from transaction fees, payment margins, and premium features.</p>
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">📚</div>
-          <h3>Training & Certification</h3>
-          <p>Access comprehensive training programs and earn certifications to become a SnapB2B expert.</p>
+          <div class="feature-icon" role="img" aria-label="Rocket icon">🚀</div>
+          <h3>Fast Time to Market</h3>
+          <p>Launch embedded AP automation in weeks, not months. Our modular API-first architecture enables rapid deployment with minimal engineering resources.</p>
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">🎯</div>
-          <h3>Sales Enablement</h3>
-          <p>Get access to sales tools, marketing materials, and demo environments to close deals faster.</p>
+          <div class="feature-icon" role="img" aria-label="Handshake icon">🤝</div>
+          <h3>Higher Client Retention</h3>
+          <p>Become embedded in your clients' daily operations. AP automation creates stickiness that significantly reduces churn and increases lifetime value.</p>
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">🤝</div>
-          <h3>Dedicated Support</h3>
-          <p>Work with a dedicated partner manager who understands your business and helps you succeed.</p>
+          <div class="feature-icon" role="img" aria-label="Chart icon">📊</div>
+          <h3>Competitive Differentiation</h3>
+          <p>Stand out from competitors by offering comprehensive payables orchestration. Transform from a commodity platform to a strategic business partner.</p>
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">📢</div>
-          <h3>Co-Marketing</h3>
-          <p>Participate in joint marketing initiatives, webinars, and events to reach more prospects.</p>
+          <div class="feature-icon" role="img" aria-label="Building icon">🏢</div>
+          <h3>White-Label & Co-Branding</h3>
+          <p>Deploy under your own brand or co-branded with SnapB2B. Full customization options to maintain your brand identity and user experience.</p>
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">🔧</div>
-          <h3>Technical Resources</h3>
-          <p>Access APIs, SDKs, documentation, and technical support for seamless integrations.</p>
+          <div class="feature-icon" role="img" aria-label="Wrench icon">🔧</div>
+          <h3>Complete Technical Support</h3>
+          <p>Access APIs, SDKs, comprehensive documentation, and dedicated integration engineers to ensure seamless deployment and ongoing success.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ERP INTEGRATIONS ===== -->
+  <!-- ===== INTEGRATION CAPABILITIES ===== -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-4">
-        <h2>ERP & System Integrations</h2>
-        <p class="text-secondary">Seamlessly connect with your existing systems</p>
+        <h2>Integration Capabilities</h2>
+        <p class="text-secondary">Connect seamlessly with your business systems</p>
       </div>
       
       <div class="card mb-4">
-        <p>SnapB2B's universal no-code connector integrates with all major ERP and accounting systems, enabling automatic data synchronization and eliminating manual data entry.</p>
+        <p>SnapB2B's universal no-code connector integrates with major business systems, enabling automatic data synchronization and eliminating manual data entry.</p>
       </div>
       
       <div class="card-grid">
         <div class="card">
-          <h3>SAP</h3>
-          <p>Full integration with SAP S/4HANA, SAP Business One, and SAP Business ByDesign for automated invoice processing and payment workflows.</p>
-          <p class="mt-2"><strong>Features:</strong></p>
-          <ul style="list-style: disc; margin-left: 2rem; color: var(--text-secondary);">
-            <li>Real-time data sync</li>
-            <li>PO matching</li>
-            <li>Vendor master data sync</li>
+          <div class="card-icon" role="img" aria-label="Computer icon">💻</div>
+          <h3>ERP & Accounting Systems</h3>
+          <p class="mb-2">Integrates with leading platforms:</p>
+          <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+            <li style="margin-bottom: 0.5rem;">• SAP (S/4HANA, Business One)</li>
+            <li style="margin-bottom: 0.5rem;">• Oracle NetSuite</li>
+            <li style="margin-bottom: 0.5rem;">• Microsoft Dynamics 365</li>
+            <li style="margin-bottom: 0.5rem;">• QuickBooks (Online & Desktop)</li>
+            <li style="margin-bottom: 0.5rem;">• Sage Intacct</li>
+            <li style="margin-bottom: 0.5rem;">• Xero</li>
+            <li style="margin-bottom: 0.5rem;">• 50+ additional systems</li>
           </ul>
         </div>
         
         <div class="card">
-          <h3>Oracle NetSuite</h3>
-          <p>Native integration with Oracle NetSuite for end-to-end AP automation with complete visibility.</p>
-          <p class="mt-2"><strong>Features:</strong></p>
-          <ul style="list-style: disc; margin-left: 2rem; color: var(--text-secondary);">
-            <li>Invoice import/export</li>
-            <li>Approval workflow sync</li>
-            <li>Multi-subsidiary support</li>
-          </ul>
-        </div>
-        
-        <div class="card">
-          <h3>Microsoft Dynamics 365</h3>
-          <p>Seamless connection with Dynamics 365 Finance and Operations for automated payables management.</p>
-          <p class="mt-2"><strong>Features:</strong></p>
-          <ul style="list-style: disc; margin-left: 2rem; color: var(--text-secondary);">
-            <li>Bi-directional sync</li>
-            <li>Dimension mapping</li>
-            <li>Payment integration</li>
-          </ul>
-        </div>
-        
-        <div class="card">
-          <h3>QuickBooks</h3>
-          <p>Direct integration with QuickBooks Online and Desktop for small to medium businesses.</p>
-          <p class="mt-2"><strong>Features:</strong></p>
-          <ul style="list-style: disc; margin-left: 2rem; color: var(--text-secondary);">
-            <li>Automatic bill creation</li>
-            <li>Vendor sync</li>
-            <li>Chart of accounts mapping</li>
-          </ul>
-        </div>
-        
-        <div class="card">
-          <h3>Sage Intacct</h3>
-          <p>Cloud-native integration with Sage Intacct for sophisticated financial management needs.</p>
-          <p class="mt-2"><strong>Features:</strong></p>
-          <ul style="list-style: disc; margin-left: 2rem; color: var(--text-secondary);">
-            <li>Multi-entity support</li>
-            <li>Dimension tracking</li>
-            <li>Custom field mapping</li>
-          </ul>
-        </div>
-        
-        <div class="card">
-          <h3>Xero</h3>
-          <p>Integration with Xero accounting software for streamlined AP processes.</p>
-          <p class="mt-2"><strong>Features:</strong></p>
-          <ul style="list-style: disc; margin-left: 2rem; color: var(--text-secondary);">
-            <li>Invoice sync</li>
-            <li>Bank reconciliation</li>
-            <li>Multi-currency support</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="text-center mt-4">
-        <p class="text-secondary mb-3">Don't see your ERP system? We support 50+ additional systems.</p>
-        <a href="contact.html" class="btn btn-primary">Request Integration</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== OTHER INTEGRATIONS ===== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="text-center mb-4">
-        <h2>Additional Integrations</h2>
-      </div>
-      
-      <div class="card-grid">
-        <div class="card">
-          <div class="card-icon">💳</div>
+          <div class="card-icon" role="img" aria-label="Credit card icon">💳</div>
           <h3>Payment Processors</h3>
           <ul style="list-style: none; padding: 0; margin-top: 1rem;">
             <li style="margin-bottom: 0.5rem;">• Stripe</li>
@@ -333,35 +290,26 @@
             <li style="margin-bottom: 0.5rem;">• Square</li>
             <li style="margin-bottom: 0.5rem;">• Authorize.net</li>
             <li style="margin-bottom: 0.5rem;">• Bill.com</li>
-          </ul>
-        </div>
-        
-        <div class="card">
-          <div class="card-icon">🏦</div>
-          <h3>Banking</h3>
-          <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-            <li style="margin-bottom: 0.5rem;">• Plaid</li>
             <li style="margin-bottom: 0.5rem;">• ACH Networks</li>
-            <li style="margin-bottom: 0.5rem;">• SWIFT</li>
-            <li style="margin-bottom: 0.5rem;">• Wire Transfers</li>
-            <li style="margin-bottom: 0.5rem;">• Virtual Cards</li>
+            <li style="margin-bottom: 0.5rem;">• SWIFT / Wire Transfers</li>
           </ul>
         </div>
         
         <div class="card">
-          <div class="card-icon">📧</div>
-          <h3>Communication</h3>
+          <div class="card-icon" role="img" aria-label="Email icon">📧</div>
+          <h3>Business Tools</h3>
           <ul style="list-style: none; padding: 0; margin-top: 1rem;">
             <li style="margin-bottom: 0.5rem;">• Microsoft 365</li>
             <li style="margin-bottom: 0.5rem;">• Google Workspace</li>
             <li style="margin-bottom: 0.5rem;">• Slack</li>
             <li style="margin-bottom: 0.5rem;">• Microsoft Teams</li>
-            <li style="margin-bottom: 0.5rem;">• Zoom</li>
+            <li style="margin-bottom: 0.5rem;">• Salesforce</li>
+            <li style="margin-bottom: 0.5rem;">• HubSpot</li>
           </ul>
         </div>
         
         <div class="card">
-          <div class="card-icon">📊</div>
+          <div class="card-icon" role="img" aria-label="Chart icon">📊</div>
           <h3>Business Intelligence</h3>
           <ul style="list-style: none; padding: 0; margin-top: 1rem;">
             <li style="margin-bottom: 0.5rem;">• Tableau</li>
@@ -372,11 +320,16 @@
           </ul>
         </div>
       </div>
+      
+      <div class="text-center mt-4">
+        <p class="text-secondary mb-3">Need a specific integration? Our API makes it easy to connect.</p>
+        <a href="contact.html" class="btn btn-primary">Request Integration</a>
+      </div>
     </div>
   </section>
 
   <!-- ===== PARTNER SUCCESS STORIES ===== -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
       <div class="text-center mb-4">
         <h2>Partner Success Stories</h2>
@@ -479,23 +432,22 @@
   </footer>
 
   <script src="js/main.js"></script>
-
+  
   <script>
-  // Mobile dropdown toggle
-  document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.nav-menu > li:has(.dropdown-menu)');
-    
-    dropdowns.forEach(dropdown => {
-      dropdown.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          this.classList.toggle('dropdown-active');
-        }
+    // Mobile dropdown toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdowns = document.querySelectorAll('.nav-menu > li:has(.dropdown-menu)');
+      
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.classList.toggle('dropdown-active');
+          }
+        });
       });
     });
-  });
   </script>
-
   
 </body>
 </html>
